@@ -24,6 +24,8 @@ buyButtons.forEach(button => {
     });
 });
 
+
+
 // Função para fazer o scroll suave ao clicar nos links do menu
 const menuLinks = document.querySelectorAll('nav ul li a');
 
@@ -74,6 +76,19 @@ window.addEventListener('scroll', function() {
         if (scrollPos > section.offsetTop) {
             section.classList.add('show');
         }
+    });
+});
+
+
+const featureCards = document.querySelectorAll('.feature-card');
+
+featureCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.classList.add('hover-effect-active');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.classList.remove('hover-effect-active');
     });
 });
 

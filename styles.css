@@ -68,22 +68,81 @@ header {
     color: white;
 }
 
+.hero-table {
+    width: 100%; /* Ajusta a largura da tabela para 100% */
+    border-collapse: collapse; /* Remove espaços entre as células */
+}
+
+.text-content {
+    max-width: 60%; /* Limita a largura do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.image-container {
+    text-align: left; /* Centraliza a imagem dentro da coluna */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.hero-image {
+    width: 100%; /* Ajusta a largura da imagem para 100% do contêiner */
+    max-width: 500px; /* Define a largura máxima da imagem (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    
+}
+
+
+
+.hero-container h2, 
+.hero-container p {
+    margin: 0; /* Remove margens do parágrafo */
+}
+
+
+.hero-container .cta-btn {
+    background-color: #FFA500; /* Cor de fundo do botão */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.hero-container .cta-btn:hover {
+    background-color: #ff7b00; /* Cor ao passar o mouse */
+}
+
+
+
 .hero {
-    background-color: #f1f1f1;
+    background-color: #d9e9e6;
     padding: 80px 20px;
     text-align: center;
 }
 
 .hero h2 {
     font-size: 2.5rem;
-    color: #007bff;
+    color: rgb(12, 158, 146);
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao texto */
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 30px auto;
+}
+
+.logo {
+    display: flex; /* Usar flexbox para alinhar horizontalmente */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+    margin-left: -50px; /* Ajuste para mover a logo para a esquerda */
+}
+
+.logo-image {
+    width: 15vw; /* Define a largura da imagem como 15% da largura da viewport */
+    max-width: 80px; /* Largura máxima para evitar que a imagem fique muito grande */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
 }
 
 .cta-btn {
@@ -123,6 +182,15 @@ header {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Movimento para cima ao passar o mouse */
 }
 
 .feature-card img {
@@ -307,3 +375,5 @@ button:active, .cta-btn:active {
     opacity: 1;
     transform: translateY(0);
 }
+
+
