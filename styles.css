@@ -13,6 +13,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+ 
 }
 
 header {
@@ -424,11 +425,50 @@ button:active, .cta-btn:active {
    
 }
 
-.hero-image2{
-    display:none;
+.whatsapp-link {
+    position: fixed;/* Necessário para posicionar o tooltip corretamente */
+    display: inline-block;
+    left:90%;
 }
 
+.bi-whatsapp {
+    font-size: 40px; /* Tamanho do ícone */
+    color: #25d366; /* Cor padrão do ícone do WhatsApp */
+    transition: transform 0.3s; /* Transição suave para o ícone */
+}
+
+.tooltip {
+    visibility: hidden; /* Inicialmente, o tooltip está escondido */
+    width: 200px; /* Tamanho do tooltip */
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: left; /* Centraliza o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 8px;
+    position: absolute;
+    bottom: 100%; /* Aparece acima do ícone */
+    left: 50%;
+    margin-left: -150px; /* Centraliza o tooltip */
+    opacity: 0; /* Torna o tooltip invisível */
+    transition: opacity 0.3s; /* Transição suave */
+    z-index: 1; /* Garante que o tooltip fique acima do conteúdo */
+}
+
+.whatsapp-link:hover .tooltip {
+    visibility: visible; /* Torna o tooltip visível quando passar o mouse */
+    opacity: 1; /* Torna o tooltip totalmente opaco */
+}
+
+.whatsapp-link:hover .bi-whatsapp {
+    transform: scale(1.1); /* Aumenta o ícone um pouco ao passar o mouse */
+}
+
+
+
+
 @media (max-width: 768px) {
+
+
     /* Configuração global */
     * {
         box-sizing: border-box;
@@ -567,6 +607,15 @@ button:active, .cta-btn:active {
     .footer-nav {
         flex-direction: column; /* Links em uma coluna */
         gap: 10px;
+    }
+
+    .whatsapp-link i {
+        font-size: 30px; /* Ajuste o tamanho conforme necessário */
+       
+    }
+
+    .tooltip{
+        display:none;
     }
 }
 
