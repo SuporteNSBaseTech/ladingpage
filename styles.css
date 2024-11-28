@@ -85,8 +85,8 @@ header {
 }
 
 .hero-image {
-    width: 100%; /* Ajusta a largura da imagem para 100% do contêiner */
-    max-width: 500px; /* Define a largura máxima da imagem (ajuste conforme necessário) */
+    width: 150%; /* Ajusta a largura da imagem para 100% do contêiner */
+    max-width: 950px; /* Define a largura máxima da imagem (ajuste conforme necessário) */
     height: auto; /* Mantém a proporção da imagem */
     
 }
@@ -333,6 +333,7 @@ html {
     padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
+  
 }
 
 .video-container {
@@ -394,22 +395,24 @@ button:active, .cta-btn:active {
     display:flex; /* Alinha os vídeos em linha */
     justify-content:center; /* Centraliza os vídeos */
     flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-    gap: 20px; /* Espaçamento horizontal entre os vídeos */
+    gap: 0px; /* Espaçamento horizontal entre os vídeos */
+    margin: 6%;
 }
 
 /* Cartão do vídeo (contêiner) */
 .video-card {
     flex: 1 1 0px; /* Define um tamanho base flexível */
-    max-width: 950px; /* Define o tamanho máximo */
-   
+    max-width: 1050px; /* Define o tamanho máximo */
+   justify-content: center;
 }
 
 /* Wrapper do vídeo */
 .video-wrapper {
-    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    width: 190%; /* Garante que o vídeo ocupe toda a largura do contêiner */
     border-radius: 8px; /* Cantos arredondados */
     overflow: hidden; /* Evita vazamentos de conteúdo */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    justify-content: center;
 }
 
 /* Estilo do vídeo */
@@ -418,57 +421,155 @@ button:active, .cta-btn:active {
     height: auto; /* Mantém a proporção do vídeo */
     border-radius: 8px; /* Arredondamento nos cantos */
     cursor: pointer; /* Mostra que o vídeo é interativo */
+   
 }
 
-/* Ajuste para telas menores (tablets)*/
+.hero-image2{
+    display:none;
+}
+
 @media (max-width: 768px) {
-.logo-image{
-    left:10px;
-    position: absolute;
-    margin-right: 2px;
+    /* Configuração global */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ajuste do cabeçalho */
+    .header-container {
+        width: 100%;
+        flex-wrap: wrap; /* Permite quebra de linha */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo h1{
+        font-size:22px;
+        margin-left:5%;
+    }
+
+    .logo-image {
+        width: 50%; /* Ajusta o tamanho da logo */
+        max-width: 90px; /* Define um limite máximo */
+        margin-left:40%;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Links em uma coluna */
+        gap: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 0 auto;
+    }
+
+/* Ajuste da seção hero */
+.hero {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Permite o uso de camadas */
+    height: auto
+    ;
 }
 
-    .header-container{
-        width: 50%;        
-    }    
 
-    .header-container h1{
-        font-size: 13px;
-        margin: 0;
-        margin-left:22px;
+/* Ajuste do texto */
+.hero h2 {
+    font-size: 1.5rem; /* Tamanho do texto */
+    position: relative; /* Garante que o texto esteja acima da imagem */
+    z-index: 2; /* Garante que o texto fique acima da camada de transparência */
+}
+
+.hero p {
+    font-size: 1rem;
+    margin: 10px auto;
+    text-align: left;
+    position: relative; /* Garante que o texto esteja acima da imagem */
+    z-index: 2; /* Garante que o texto fique acima da camada de transparência */
+}
+
+
+
+    .hero-image {
+        display:none;
+    } 
+
+        
+
+    /* Botões */
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 
-    .header-container .logo-image{
-     margin-left: 0;
-    }  
-    
-    .nav-links{
-        font-size: 12px;
-       gap:1px;
-    }
-
-    .hero h2{
-        font-size: medium;       
-    }
-
-    .hero p{
-        font-size: medium;
-        text-align:left;
-    }
-
-    .hero image{
-       max-width:max-content;
-    }
-
-   .cta-btn{
-       font-size: small;
-    }
-
+    /* Ajuste dos vídeos */
     .video-card {
-        flex: 1 1 90%; /* Quase toda a largura da tela */
-        max-width: 100%; /* Sem limite de largura */
-     }
-} 
+        flex: 1 1 120%; /* Ocupa toda a largura */
+        max-width: 100%;
+        
+     
+    }
+
+    .video-wrapper {
+        width: 110%; /* Ajusta ao tamanho do contêiner */
+        margin: 0 auto;
+    }
+
+
+
+    /* Ajuste da seção de recursos */
+    .features-container {
+        width: 100%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* Exibe em uma única coluna */
+        gap: 20px;
+    }
+
+    /* Cartões */
+    .feature-card {
+        width: 100%; /* Ocupa toda a largura */
+        margin: 0 auto;
+    }
+
+    /* Ajuste da seção de preços */
+    .pricing-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .plan-cards {
+        flex-direction: column; /* Exibe os planos em uma coluna */
+        gap: 20px;
+    }
+
+    .plan-card {
+        width: 100%; /* Ajusta o cartão à largura total */
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Rodapé */
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Links em uma coluna */
+        gap: 10px;
+    }
+}
+
 
 /* Ajuste para telas grandes (desktop) */
  @media (min-width: 1200px) {
