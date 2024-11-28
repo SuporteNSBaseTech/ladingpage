@@ -480,35 +480,51 @@ button:active, .cta-btn:active {
         padding: 0;
     }
 
-    /* Ajuste do cabeçalho */
-    .header-container {
-        width: 100%;
-        flex-wrap: wrap; /* Permite quebra de linha */
-        padding: 10px;
-        text-align: center;
-    }
+    /* Ajuste para o cabeçalho (logo e menu) */
+.header-container {
+    display: flex; /* Flexbox para alinhamento */
+    flex-direction: column; /* Alinha logo e menu de navegação em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+   
+}
 
-    .logo h1{
-        font-size:22px;
-        margin-left:5%;
-    }
+/* Estilos para a navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0; /* Remove a margem interna da lista */
+    margin-top: 10px; /* Dá um espaçamento entre o logo e o menu */
+}
+
+.nav-links li a {
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+
+.logo h1 {
+    font-size: 2rem;
+    color: white;
+    margin: 0; /* Remove margens ao redor do logo */
+}
 
     .logo-image {
         width: 50%; /* Ajusta o tamanho da logo */
         max-width: 90px; /* Define um limite máximo */
-        margin-left:40%;
+       
     }
 
-    .nav-links {
-        flex-direction: column; /* Links em uma coluna */
-        gap: 10px;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .nav-links li {
-        margin: 0 auto;
-    }
+   
 
 /* Ajuste da seção hero */
 .hero {
