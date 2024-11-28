@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
@@ -388,5 +388,102 @@ button:active, .cta-btn:active {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Container principal dos vídeos */
+.video-container {
+    display:flex; /* Alinha os vídeos em linha */
+    justify-content:center; /* Centraliza os vídeos */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    gap: 20px; /* Espaçamento horizontal entre os vídeos */
+}
+
+/* Cartão do vídeo (contêiner) */
+.video-card {
+    flex: 1 1 0px; /* Define um tamanho base flexível */
+    max-width: 950px; /* Define o tamanho máximo */
+   
+}
+
+/* Wrapper do vídeo */
+.video-wrapper {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    border-radius: 8px; /* Cantos arredondados */
+    overflow: hidden; /* Evita vazamentos de conteúdo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo do vídeo */
+.hover-play-video {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    border-radius: 8px; /* Arredondamento nos cantos */
+    cursor: pointer; /* Mostra que o vídeo é interativo */
+}
+
+/* Ajuste para telas menores (tablets)*/
+@media (max-width: 768px) {
+.logo-image{
+    left:10px;
+    position: absolute;
+    margin-right: 2px;
+}
+
+    .header-container{
+        width: 50%;        
+    }    
+
+    .header-container h1{
+        font-size: 13px;
+        margin: 0;
+        margin-left:22px;
+    }
+
+    .header-container .logo-image{
+     margin-left: 0;
+    }  
+    
+    .nav-links{
+        font-size: 12px;
+       gap:1px;
+    }
+
+    .hero h2{
+        font-size: medium;       
+    }
+
+    .hero p{
+        font-size: medium;
+        text-align:left;
+    }
+
+    .hero image{
+       max-width:max-content;
+    }
+
+   .cta-btn{
+       font-size: small;
+    }
+
+    .video-card {
+        flex: 1 1 90%; /* Quase toda a largura da tela */
+        max-width: 100%; /* Sem limite de largura */
+     }
+} 
+
+/* Ajuste para telas grandes (desktop) */
+ @media (min-width: 1200px) {
+    .video-container {
+        gap: 30px; /* Espaço maior entre vídeos */
+    } 
+
+     .video-card {
+        flex: 1 1 400px; /* Aumenta o tamanho base em telas grandes */
+         max-width: 500px; /*Define largura máxima */
+    }
+ } 
+
+
+
+
 
 

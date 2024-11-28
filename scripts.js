@@ -94,3 +94,32 @@ featureCards.forEach(card => {
 
 
 
+ // Seleciona todos os vídeos com a classe 'hover-play-video'
+ const videos = document.querySelectorAll('.hover-play-video');
+
+ videos.forEach(video => {
+     // Quando o mouse entra na área do vídeo, ele começa a tocar
+     video.addEventListener('mouseenter', () => {
+         video.muted = true; // Garante que o vídeo está mudo
+         video.play(); // Inicia a reprodução
+     });
+
+     // Quando o mouse sai da área do vídeo, ele pausa
+     video.addEventListener('mouseleave', () => {
+         video.pause(); // Pausa o vídeo
+         video.currentTime = 0; // Reinicia o vídeo
+     });
+ });
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".hover-play-video");
+
+    videos.forEach(video => {
+        video.play().catch(error => {
+            console.log("Autoplay bloqueado pelo navegador:", error);
+        });
+    });
+});
+
+
+
