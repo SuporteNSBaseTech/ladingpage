@@ -426,15 +426,16 @@ button:active, .cta-btn:active {
 }
 
 .whatsapp-link {
-    position: fixed;/* Necessário para posicionar o tooltip corretamente */
+    position: fixed; /* Necessário para posicionar o tooltip corretamente */
     display: inline-block;
-    left:90%;
+    left: 90%;
 }
 
 .bi-whatsapp {
     font-size: 40px; /* Tamanho do ícone */
     color: #25d366; /* Cor padrão do ícone do WhatsApp */
-    transition: transform 0.3s; /* Transição suave para o ícone */
+    transition: transform 0.3s, text-shadow 0.3s; /* Transição suave para o ícone e a sombra */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);; /* Sombra suave ao redor do ícone */
 }
 
 .tooltip {
@@ -461,7 +462,9 @@ button:active, .cta-btn:active {
 
 .whatsapp-link:hover .bi-whatsapp {
     transform: scale(1.1); /* Aumenta o ícone um pouco ao passar o mouse */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Aumenta a sombra ao passar o mouse */
 }
+
 
 
 
@@ -625,9 +628,27 @@ button:active, .cta-btn:active {
         gap: 10px;
     }
 
-    .whatsapp-link i {
-        font-size: 30px; /* Ajuste o tamanho conforme necessário */
-       
+    .whatsapp-link {
+        position: fixed; /* Necessário para posicionar o tooltip corretamente */
+        display: inline-block;
+        left: 90%;
+    }
+
+    .bi-whatsapp {
+        font-size: 35px; /* Ajusta o tamanho do ícone para telas menores */
+        color: #25d366; /* Cor padrão do ícone do WhatsApp */
+        transition: transform 0.3s, text-shadow 0.3s; /* Transição suave para o ícone e a sombra */
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.6); /* Sombra mais forte */
+    }
+
+    .whatsapp-link:hover .tooltip {
+        visibility: visible; /* Torna o tooltip visível quando passar o mouse */
+        opacity: 1; /* Torna o tooltip totalmente opaco */
+    }
+
+    .whatsapp-link:hover .bi-whatsapp {
+        transform: scale(1.1); /* Aumenta o ícone um pouco ao passar o mouse */
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Sombra mais forte ao passar o mouse */
     }
 
     .tooltip{
