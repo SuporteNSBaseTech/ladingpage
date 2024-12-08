@@ -92,6 +92,19 @@ featureCards.forEach(card => {
     });
 });
 
+const planCards = document.querySelectorAll('.plan-card');
+
+planCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.classList.add('hover-effect-active');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.classList.remove('hover-effect-active');
+    });
+});
+
+
 
 
  // Seleciona todos os vídeos com a classe 'hover-play-video'

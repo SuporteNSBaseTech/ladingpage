@@ -87,9 +87,9 @@ header {
 
 .hero-image {
     width: 150%; /* Ajusta a largura da imagem para 100% do contêiner */
-    max-width: 950px; /* Define a largura máxima da imagem (ajuste conforme necessário) */
+    max-width: 750px; /* Define a largura máxima da imagem (ajuste conforme necessário) */
     height: auto; /* Mantém a proporção da imagem */
-    
+    margin-left: -10%;
 }
 
 
@@ -220,7 +220,7 @@ header {
 
 /* Seção de Planos */
 .pricing-section {
-    background-color: #007bff;
+    background: linear-gradient(45deg, rgb(12, 158, 146) 0%, rgb(63, 217, 223) 100%);
     color: white;
     padding: 60px 20px;
 }
@@ -239,7 +239,7 @@ header {
 }
 
 .plan-card {
-    background-color: #0056b3;
+    background: white;
     padding: 30px;
     border-radius: 10px;
     width: 300px;
@@ -248,10 +248,12 @@ header {
 .plan-card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    color: black;
 }
 
 .plan-card p {
     margin-bottom: 20px;
+    color: black;
 }
 
 .price {
@@ -394,26 +396,26 @@ button:active, .cta-btn:active {
 /* Container principal dos vídeos */
 .video-container {
     display:flex; /* Alinha os vídeos em linha */
-    justify-content:center; /* Centraliza os vídeos */
+    
     flex-wrap: wrap; /* Permite quebrar linha em telas menores */
     gap: 0px; /* Espaçamento horizontal entre os vídeos */
-    margin: 6%;
+    margin-left: 18%;
 }
 
 /* Cartão do vídeo (contêiner) */
 .video-card {
     flex: 1 1 0px; /* Define um tamanho base flexível */
-    max-width: 1050px; /* Define o tamanho máximo */
-   justify-content: center;
+    max-width: 950px; /* Define o tamanho máximo */
+   justify-content:left;
 }
 
 /* Wrapper do vídeo */
 .video-wrapper {
-    width: 190%; /* Garante que o vídeo ocupe toda a largura do contêiner */
+    width: 170%; /* Garante que o vídeo ocupe toda a largura do contêiner */
     border-radius: 8px; /* Cantos arredondados */
     overflow: hidden; /* Evita vazamentos de conteúdo */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    justify-content: center;
+    justify-content:left;
 }
 
 /* Estilo do vídeo */
@@ -422,7 +424,7 @@ button:active, .cta-btn:active {
     height: auto; /* Mantém a proporção do vídeo */
     border-radius: 8px; /* Arredondamento nos cantos */
     cursor: pointer; /* Mostra que o vídeo é interativo */
-   
+   justify-content: left;
 }
 
 .whatsapp-link {
